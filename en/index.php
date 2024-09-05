@@ -98,6 +98,25 @@
         /* Ensure PC-Box is visible on larger screens */
     }
 
+    .hero-lego {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    @media only screen and (max-width: 1400px) {
+        .img-lego {
+            /* Each image takes up 50% of the container width */
+            max-width: 24%;
+        }
+
+        .hero-lego {
+
+        }
+
+    }
+
     /* For mobile phones: */
     @media only screen and (max-width: 600px) {
         .Phone-Box {
@@ -118,7 +137,7 @@
             max-width: 49%;
         }
 
-        .para2{
+        .para2 {
             color: white;
         }
     }
@@ -139,8 +158,7 @@
         </div>
         <div class="wal">
             <div class="conDiv">
-                <div class="limg"><img src="../images/2022101014476761.png"
-                        alt="A new generation block brand, born in 2019."></div>
+                <div class="limg"><img src="../images/2022101014476761.png" alt="A new generation block brand, born in 2019."></div>
                 <div style="color: black;" class="txt">A leading Chinese toy brand, specializing in original building
                     blocks since 1994.</div>
                 <div style="color: black;" class="content">
@@ -169,12 +187,10 @@
     <div class="swiper-slide pageSlide indexP2 cur swiper-slide-next">
         <div class="bg PC-Box" style="background-image: url(../images/20220906090844329.jpg); padding-top: 20px;">
         </div>
-        <div class="bg Phone-Box"><img src="../images/20220906090914242.jpg"
-                alt="A new generation block brand, born in 2019."></div>
+        <div class="bg Phone-Box"><img src="../images/20220906090914242.jpg" alt="A new generation block brand, born in 2019."></div>
         <div class="wal">
             <div class="conDiv">
-                <div class="limg"><img src="../images/2022082419251955.png"
-                        alt="A new generation block brand, born in 2019."></div>
+                <div class="limg"><img src="../images/2022082419251955.png" alt="A new generation block brand, born in 2019."></div>
                 <div class="txt">A new generation block brand, born in 2019.</div>
                 <div class="content">
                     <p>Keeppley is a new-generation brand under Qman, a company that has specialized in producing
@@ -198,8 +214,8 @@
     <div class="swiper-slide pageSlide indexP3">
 
         <div class="wal">
-            <div style="display: flex; justify-content: center; align-items: center;">
-                <img src="../images/LEGO_logo.png" alt="">
+            <div class="hero-lego">
+                <img src="../images/LEGO_logo.png" alt="" height="150" width="150">
             </div>
             <div class="content">
                 <p><strong>Imagination:</strong> Promoting free play as a means to foster creativity and curiosity, and
@@ -227,10 +243,8 @@
             <div class="txt">Top LEGO Category</div>
             <div class="img-container">
                 <a href="#"><img class="img-lego" src="../images/LegoChima.jfif" alt="" height="150" width="275"></a>
-                <a href="#"><img class="img-lego" src="../images/LegoNexoKnights.jfif" alt="" height="150"
-                        width="275"></a>
-                <a href="#"><img class="img-lego" src="../images/LEGO-City-logo.jpg" alt="" height="150"
-                        width="275"></a>
+                <a href="#"><img class="img-lego" src="../images/LegoNexoKnights.jfif" alt="" height="150" width="275"></a>
+                <a href="#"><img class="img-lego" src="../images/LEGO-City-logo.jpg" alt="" height="150" width="275"></a>
                 <a href="#"><img class="img-lego" src="../images/LegoNinjago.jfif" alt="" height="150" width="275"></a>
             </div>
 
@@ -245,7 +259,7 @@
 
 
     <script>
-        $(function () {
+        $(function() {
             var initial = 0;
             if (localStorage.initialIndex) {
                 initial = localStorage.initialIndex;
@@ -263,13 +277,13 @@
                     //              return '<span class="' + className + '">' + "0" + (index + 1) + '</span>';
                     //            },
                     speed: 800,
-                    onSlideChangeEnd: function (swiper) {
+                    onSlideChangeEnd: function(swiper) {
                         var curr = swiper.activeIndex;
                         localStorage.initialIndex = curr;
                         $(".pageSlide").removeClass("cur").eq(swiper.realIndex).addClass("cur");
                         headFun(curr);
                     },
-                    onTransitionEnd: function (swiper) {
+                    onTransitionEnd: function(swiper) {
                         if (swiper.progress === 1) {
                             swiper.activeIndex = swiper.slides.length - 1
                         }
@@ -279,6 +293,7 @@
                 $('#page-swiper-wrapper').removeClass('swiper-wrapper');
                 $('.pageSlide').removeClass('swiper-slide');
             }
+
             function headFun(curr) {
                 if (curr === 2) {
                     $('.headDiv').addClass('hov');

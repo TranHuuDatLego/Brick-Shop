@@ -107,6 +107,15 @@ if (isset($_GET['id'])) {
         text-align: center;
     }
 
+    @media only screen and (max-width: 1400px) {
+        .pbanner {
+            display: flex;
+            justify-content: center;
+            height: 90%;
+            width: 80%;
+            margin: auto;
+        }
+    }
     /* For mobile phones: */
     @media only screen and (max-width: 600px) {
         .imgDiv img {
@@ -143,6 +152,8 @@ if (isset($_GET['id'])) {
         color: #e74c3c;
         text-align: center;
     }
+
+
     }
 </style>
 

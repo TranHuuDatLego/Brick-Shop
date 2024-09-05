@@ -15,23 +15,60 @@
     }
 
     .productBox {
-        padding-top: 80px;
+        padding-top: 20px;
         padding-bottom: 0px;
     }
 
     .productList {
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: 0px;
+        padding-bottom: 0px;
     }
+
+    .pbanner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80%;
+        width: 80%;
+        margin: auto;
+        /* Căn giữa cả ngang và dọc */
+        object-fit: cover;
+    }
+
+    @media only screen and (max-width: 1400px) {
+        .pbanner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90%;
+            width: 70%;
+            margin: auto;
+            /* Căn giữa cả ngang và dọc */
+            object-fit: cover;
+        }
+
+        .productBox {
+            padding-top: 40px;
+        }
+    }
+
 
     @media only screen and (max-width: 600px) {
         .productBox {
             padding-top: 10px;
             padding-bottom: 0px;
         }
-        .wal{
+
+        .wal {
             padding-top: 10px;
             padding-bottom: 10px;
+        }
+
+        .pbanner {
+            height: auto;
+            width: auto;
+            margin: 0;
+            object-fit: none;
         }
     }
 </style>
