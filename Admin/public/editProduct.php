@@ -334,23 +334,23 @@ if ($resultCategory->num_rows > 0) {
               <div class="form-group flex center">
               <div style="width: 35%;">
                 <label for="price">Price (USD):</label>
-                <input style="max-width:300px" class="form-control input" id="price" name="p_price" type="text" placeholder="Price" value="<?php echo $p_price_en?>">
+                <input style="max-width:300px" class="form-control input" id="price" name="p_price_en" type="text" placeholder="Price" value="<?php echo $p_price_en?>">
               </div>
               <div style="width: 35%;">
                 <label for="price">Price (VND):</label>
-                <input style="max-width:300px" class="form-control input" id="price" name="p_price" type="text" placeholder="Price" value="<?php echo $p_price_vn?>">
+                <input style="max-width:300px" class="form-control input" id="price" name="p_price_vn" type="text" placeholder="Price" value="<?php echo $p_price_vn?>">
               </div>
             </div>
 
               <div class="form-group">
                 <label for="description">Description (English)</label>
-                <textarea class="form-control input" id="description" name="p_description" rows="4"
+                <textarea class="form-control input" id="description" name="p_description_en" rows="4"
                   value="<?php echo $p_description_en ?>" placeholder="Description"></textarea>
               </div>
 
               <div class="form-group">
                 <label for="description">Description (Vietnamese)</label>
-                <textarea class="form-control input" id="description" name="p_description" rows="4"
+                <textarea class="form-control input" id="description" name="p_description_vn" rows="4"
                   value="<?php echo $p_description_vn ?>" placeholder="Description"></textarea>
               </div>
 
