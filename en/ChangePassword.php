@@ -46,6 +46,9 @@ if (isset($_SESSION["userID"])) {
     <!-- Important -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Offline -->
+    <link href="../style/bootstrap_4.5.0.css" rel="stylesheet">
+
     <!-- Thêm favicon vào đây -->
     <link rel="icon" href="../images/keeppley_logo.webp" type="image/x-icon">
 
@@ -352,16 +355,16 @@ if (isset($_SESSION["userID"])) {
             });
         });
 
-        document.getElementById('accountForm').addEventListener('submit', function () {
+        document.getElementById('accountForm').addEventListener('submit', function() {
             isFormDirty = false;
         });
 
-        document.getElementById('cancelButton').addEventListener('click', function () {
+        document.getElementById('cancelButton').addEventListener('click', function() {
             isFormDirty = false;
             location.reload();
         });
 
-        window.addEventListener('beforeunload', function (e) {
+        window.addEventListener('beforeunload', function(e) {
             if (isFormDirty) {
                 const confirmationMessage = 'You have unsaved changes. Are you sure you want to leave this page?';
                 e.returnValue = confirmationMessage; // Gecko, Trident, Chrome 34+

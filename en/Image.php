@@ -44,6 +44,9 @@ if (isset($_SESSION["userID"])) {
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Offline -->
+    <link href="../style/bootstrap_4.5.0.css" rel="stylesheet">
+
     <!-- Thêm favicon vào đây -->
     <link rel="icon" href="../images/keeppley_logo.webp" type="image/x-icon">
 
@@ -216,13 +219,13 @@ if (isset($_SESSION["userID"])) {
             }
 
             .image-gallery img {
-            width: 80px;
-            height: 80px;
-            margin: 5px;
-            cursor: pointer;
-            border-radius: 5px;
-            object-fit: cover
-        }
+                width: 80px;
+                height: 80px;
+                margin: 5px;
+                cursor: pointer;
+                border-radius: 5px;
+                object-fit: cover
+            }
         }
     </style>
 
@@ -234,7 +237,7 @@ if (isset($_SESSION["userID"])) {
             if (file) {
                 const reader = new FileReader();
 
-                reader.onload = function (e) {
+                reader.onload = function(e) {
                     preview.src = e.target.result;
                     preview.style.display = 'block';
                 }
@@ -246,7 +249,7 @@ if (isset($_SESSION["userID"])) {
             }
         }
 
-        document.getElementById("chooseImageBtn").onclick = function () {
+        document.getElementById("chooseImageBtn").onclick = function() {
             var gallery = document.getElementById("imageGallery");
             if (gallery.style.display === "none" || gallery.style.display === "") {
                 gallery.style.display = "flex";
@@ -264,7 +267,6 @@ if (isset($_SESSION["userID"])) {
             defaultImageInput.value = imgElement.src;
 
         }
-
     </script>
 </head>
 
@@ -373,13 +375,13 @@ if (isset($_SESSION["userID"])) {
                                 </div>
                                 <div class="form-group">
                                     <label style="padding-left: 10px;" class="form-label"><strong>Or Choose Default images:</strong></label><br>
-                                    <label  class="form-label label-setting">People:</label>
+                                    <label class="form-label label-setting">People:</label>
                                     <div id="imageGallery" class="image-gallery">
                                         <img src="../user/male.png" alt="Default Image 1" onclick="selectImage(this)">
                                         <img src="../user/female.jpg" alt="Default Image 2" onclick="selectImage(this)">
                                     </div>
 
-                                    <label  class="form-label label-setting">Cute:</label>
+                                    <label class="form-label label-setting">Cute:</label>
                                     <div id="imageGallery" class="image-gallery">
                                         <img src="../user/BinhQuyen.jpg" alt="Default Image 10"
                                             onclick="selectImage(this)">
@@ -441,16 +443,16 @@ if (isset($_SESSION["userID"])) {
             });
         });
 
-        document.getElementById('accountForm').addEventListener('submit', function () {
+        document.getElementById('accountForm').addEventListener('submit', function() {
             isFormDirty = false;
         });
 
-        document.getElementById('cancelButton').addEventListener('click', function () {
+        document.getElementById('cancelButton').addEventListener('click', function() {
             isFormDirty = false;
             location.reload();
         });
 
-        window.addEventListener('beforeunload', function (e) {
+        window.addEventListener('beforeunload', function(e) {
             if (isFormDirty) {
                 const confirmationMessage = 'You have unsaved changes. Are you sure you want to leave this page?';
                 e.returnValue = confirmationMessage; // Gecko, Trident, Chrome 34+

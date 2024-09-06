@@ -50,7 +50,9 @@ if (isset($_SESSION["userID"])) {
 
     <!-- Important -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <!-- Offline -->
+    <link href="../style/bootstrap_4.5.0.css" rel="stylesheet">
+    
     <!-- Thêm favicon vào đây -->
     <link rel="icon" href="../images/keeppley_logo.webp" type="image/x-icon">
     <style type="text/css">

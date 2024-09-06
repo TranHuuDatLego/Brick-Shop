@@ -431,8 +431,12 @@ $query = mysqli_query($conn, $sql);
                 </tbody>
               </table>
             </div>
+            <div class="form-group">
+              <a style="margin:20px" href="../../en/product.php" class="btn btn-primary">View Shop</a>
+            </div>
           </div>
         </div>
+
       </main>
     </div>
   </div>
