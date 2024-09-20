@@ -186,14 +186,14 @@ if (isset($_SESSION["userID"])) {
         <div class="headDiv home">
             <!-- Important -->
             <div class="wal">
-                <a href="../en/product.php" class="logo">
+                <a href="../en/index.php" class="logo">
                     <img src="../images/logo.png" class="PC-Box" alt="Qman Toys">
                 </a>
 
                 <div class="lan">
                     <ul>
                         <!-- Show Icon cart  -->
-                        <li><a href="../en/product.php" class="fa-solid fa-house btn-cart" style="color: #000000;"></a>
+                        <li><a href="../en/index.php" class="fa-solid fa-house btn-cart" style="color: #000000;"></a>
                         </li>
 
                         <?php
@@ -234,7 +234,7 @@ if (isset($_SESSION["userID"])) {
     <!---->
 
     <div style="margin-top:80px" class="container light-style flex-grow-1 container-p-y">
-        <a href="../en/product.php" class="logo">
+        <a href="../en/index.php" class="logo">
             <img src="../images/logo.png" class="Phone-Box" alt="Qman Toys" height="40">
         </a>
         <h4 class="font-weight-bold py-3 mb-4">

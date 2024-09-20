@@ -111,9 +111,27 @@
             max-width: 24%;
         }
 
-        .hero-lego {
 
+    }
+
+    /* For mobile phones: 2 images per row */
+    @media only screen and (max-width: 1200px) {
+        .img-lego {
+            /* Each image takes up 50% of the container width */
+            max-width: 30%;
         }
+
+        .para2 {
+            color: white;
+        }
+    }
+
+    @media only screen and (max-width: 800px) {
+        .img-lego {
+            /* Each image takes up 50% of the container width */
+            max-width: 48%;
+        }
+
 
     }
 
@@ -127,18 +145,6 @@
         .PC-Box {
             display: none;
             /* Hide PC-Box on mobile screens */
-        }
-    }
-
-    /* For mobile phones: 2 images per row */
-    @media only screen and (max-width: 600px) {
-        .img-lego {
-            /* Each image takes up 50% of the container width */
-            max-width: 49%;
-        }
-
-        .para2 {
-            color: white;
         }
     }
 </style>
@@ -158,7 +164,7 @@
         </div>
         <div class="wal">
             <div class="conDiv">
-                <div class="limg"><img src="../images/2022101014476761.png" alt="A new generation block brand, born in 2019."></div>
+                <div style="width: 175px; height: 60px; padding-left:50px" ><img src="../images/2022101014476761.png" alt="A new generation block brand, born in 2019."></div>
                 <div style="color: black;" class="txt">A leading Chinese toy brand, specializing in original building
                     blocks since 1994.</div>
                 <div style="color: black;" class="content">
@@ -175,7 +181,7 @@
                         dreams to
                         life.</p>
                 </div>
-                <a href="Qman_Products.php"><button id="button-add" class="qman-btn">View Products</button></a>
+                <a href="Qman_Products.php"><img style="padding-top:20px" src="../images/Btn-Product-EN-skin.png" height="50"></a>
             </div>
         </div>
         <!-- <div class="botImg">
@@ -190,7 +196,7 @@
         <div class="bg Phone-Box"><img src="../images/20220906090914242.jpg" alt="A new generation block brand, born in 2019."></div>
         <div class="wal">
             <div class="conDiv">
-                <div class="limg"><img src="../images/2022082419251955.png" alt="A new generation block brand, born in 2019."></div>
+                <div style="padding-left:50px" class="limg"><img src="../images/2022082419251955.png" alt="A new generation block brand, born in 2019."></div>
                 <div class="txt">A new generation block brand, born in 2019.</div>
                 <div class="content">
                     <p>Keeppley is a new-generation brand under Qman, a company that has specialized in producing
@@ -204,7 +210,7 @@
                         manga
                         series.</p>
                 </div>
-                <a href="Keeppley_Products.php"><button id="button-add" class="keeppley-btn">View Products</button></a>
+                <a href="Keeppley_Products.php"><img style="padding-top:20px" src="../images/Btn-Product-EN white.png" height="50"></a>
             </div>
         </div>
     </div>

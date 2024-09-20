@@ -14,7 +14,7 @@
     <div class="headDiv home">
         <div class="wal">
             <a href="../en/" class="logo">
-            <img src="../images/logo.png" class="PC-Box" alt="Qman Toys">
+            <img style="width: 279px; height: 59px;" src="../images/logo.png" class="PC-Box" alt="Qman Toys">
             <img src="../images/logo.png" class="Phone-Box logo" alt="Qman Toys">       
             </a>
    

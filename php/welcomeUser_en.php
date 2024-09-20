@@ -27,7 +27,24 @@
     <?php endif ?>
 
 <?php else: ?>
-    <!-- EN -->
-    <li><a href="../php/Signup_en.php">Sign Up</a></li>
-    <li><a href="../php/ChooseLogin_en.php">Login</a></li>
+    <li style="margin-top: 20px;">
+        <a href="../php/ChooseLogin_en.php"
+            style="display: block; background-color: #e0e0e0; height: 40px; font-size: 16px; 
+              font-family: Inter; font-weight: 700; border-radius: 20px; padding: 0px 12px; position: relative;">
+            <div style="top: 20%; left: 50%; transform: translate(-2%, -25%); margin-top: 0; padding-left:12px; padding-right:12px">
+                Sign Up
+            </div>
+        </a>
+    </li>
+
+    <li style="margin-top: 20px;">
+        <a href="../php/ChooseLogin_en.php"
+            style="display: block; background-color: #000000; height: 40px; color: white; font-size: 16px; 
+              font-family: Inter; font-weight: 700; border-radius: 20px; padding: 0px 12px; position: relative;">
+            <div style="top: 20%; left: 50%; transform: translate(-2%, -25%); margin-top: 0; padding-left:12px; padding-right:12px">
+                Login
+            </div>
+        </a>
+    </li>
+
 <?php endif; ?>
