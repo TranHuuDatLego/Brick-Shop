@@ -116,42 +116,43 @@ if (isset($_GET['id'])) {
             margin: auto;
         }
     }
+
     /* For mobile phones: */
     @media only screen and (max-width: 600px) {
         .imgDiv img {
-        width: 75%;
-        height: 75%;
-        object-fit: cover
-    }
+            width: 75%;
+            height: 75%;
+            object-fit: cover
+        }
 
-    .box {
-        padding-bottom: 40px;
-        height: 600px;
-    }
+        .box {
+            padding-bottom: 40px;
+            height: 600px;
+        }
 
-    .p_num {
-        padding-top: 2px;
-        text-align: center;
-        line-height: 20px;
-        color: #919191;
-        font-size: 14px;
-    }
+        .p_num {
+            padding-top: 2px;
+            text-align: center;
+            line-height: 20px;
+            color: #919191;
+            font-size: 14px;
+        }
 
-    .p_name {
-        padding-top: 2px;
-        font-weight: bold;
-        font-size: 14px;
-        color: #242424;
-        text-align: center;
-    }
+        .p_name {
+            padding-top: 2px;
+            font-weight: bold;
+            font-size: 14px;
+            color: #242424;
+            text-align: center;
+        }
 
-    .p_price {
-        padding-top: 2px;
-        font-weight: bold;
-        font-size: 14px;
-        color: #e74c3c;
-        text-align: center;
-    }
+        .p_price {
+            padding-top: 2px;
+            font-weight: bold;
+            font-size: 14px;
+            color: #e74c3c;
+            text-align: center;
+        }
 
 
     }
@@ -172,7 +173,7 @@ if (isset($_GET['id'])) {
                 <img src="../images/<?php echo $category_images[1]; ?>" class="PC-Box" alt="Doraemon" />
                 <img src="../images/<?php echo $category_images[1]; ?>" class="Phone-Box" alt="Doraemon" />
             </div>
-            <div class="title"><?php echo $category_name_en; ?></div>
+            <div class="title font-family"><?php echo $category_name_en; ?></div>
             <div class="list">
                 <ul>
 
@@ -191,7 +192,7 @@ if (isset($_GET['id'])) {
                         if (empty($product_images[2])) {
                             $product_images[2] = $product_images[0];
                         }
-                        ?>
+                    ?>
 
                         <li>
                             <div class="box">

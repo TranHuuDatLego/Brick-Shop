@@ -87,7 +87,6 @@ $website = "Product_Detail.php?p_id=" . $product['p_id'];
     <style>
         body {
             background-color: #f8f8f8;
-            padding-top: 80px;
             margin: 0;
             /* padding: 0; */
             min-height: 100%;

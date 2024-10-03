@@ -1,67 +1,197 @@
-<div class="navLayer">
-
-    <div class="bg">
-        <div class="toptop ">
-            <a href="../en/product.php" class="logo"><img src="../images/logo.png" alt="Qman Toys"></a>
-
-            <div class="txt">Home</div>
-            <a style="padding-top: 20px;" href="javascript:;" class="closeBtn"><img src="../images/close.png" /></a>
-        </div>
-        <div class="sideNav">
-            <div class="subNav"><a href="../en"><img src="../images/20220825135842913.png" alt="">Our Story</a></div>
-            <div class="subNav"><a href="../en/product.php"><img src="../images/20220825135859657.png" alt="">Our
-                    Products</a></div>
-
-            <div class="subNav"><a href="../en/Contact/"><img src="../images/20220825135930547.png" alt="">Contact
-                    Us</a></div>
-
-
-
-            <!-- Show Icon cart and Profile Avatar -->
-            <?php if ($userLogin['userName']): ?>
-
-                <!-- <li><a href="#">Welcome, Doraemon và những người bạn tuyệt vời</a></li> -->
-
-                <!-- Show Icon cart  -->
-                <!-- <button >Giỏ hàng</button> -->
-                <div class="subNav"><a href="../php/ChooseLogin_en.php"><img src="../images/cart.png" alt="">View Cart</a></div>
-
-                <!-- Show Profile Avatar -->
-                <?php if (!$userLogin['image']): ?>
-                    <div class="subNav"><a href="../en/General.php"><img class="img-user" src="../images/user.png" alt=""
-                                >Profile</a></div>
-
-                <?php else: ?>
-                    <div class="subNav"><a href="../en/General.php"><img class="img-user"
-                                src="../images/user.png" alt="" >Profile</a></div>
-                <?php endif ?>
-
-            <?php else: ?>
-                <!-- EN -->
-                <div class="subNav"><a href="../php/Signup_en.php"><img src="../images/signup.png" alt="">Sign up</a></div>
-                <div class="subNav"><a href="../php/ChooseLogin_en.php"><img src="../images/user.png" alt="">Login</a></div>
-            <?php endif; ?>
-        </div>
-        <div class="lan">
-            <ul>
-                <li><a href="../en/<?php echo $website ?>" class="cur">EN</a></li>
-                <li><a href="../vn/<?php echo $website ?>">VN</a></li>
-
-            </ul>
-        </div>
-    </div>
-
-</div>
-
-<Style>
-    .subNav {
+<style>
+    /* Mobile Header */
+    .navbar.mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         padding: 10px;
     }
-</Style>
+
+    .logo img {
+        max-width: 200px;
+    }
+
+    .hamburger-menu {
+        padding: 15px 15px;
+        background-color: #ff5c5c;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 24px;
+    }
+
+    /* Mobile Menu Layer */
+    .navLayer {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        z-index: 9999;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .navLayer.active {
+        display: flex;
+    }
+
+    .navbar-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .closeBtn {
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .nav-items {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-items li {
+        margin: 20px 0;
+    }
+
+    .nav-items li a {
+        display: block;
+        padding: 10px 20px;
+        border-radius: 10px;
+        background-color: #fff;
+        color: #ff5c5c;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 16px;
+        text-align: center;
+        border: 1px solid #ff5c5c;
+        transition: background-color 0.3s ease;
+    }
+
+    .nav-items .active {
+        background-color: #ff5c5c;
+        color: white;
+    }
+
+    /* Language Switch */
+    .lang-switch {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .lang-btn {
+        background-color: #fff;
+        color: #ff5c5c;
+        border: 1px solid #ff5c5c;
+        padding: 10px 20px;
+        border-radius: 50px;
+        margin: 0 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .lang-btn.active,
+    .lang-btn:hover {
+        background-color: #ff5c5c;
+        color: white;
+    }
+
+    .navbar.desktop {
+        display: flex;
+    }
+
+    .navbar.mobile {
+        display: none;
+    }
+
+    /* Responsive Styles Header */
+    @media (max-width: 768px) {
+        .navbar.desktop {
+            display: none;
+        }
+
+        .navbar.mobile {
+            display: flex;
+        }
+    }
+
+    /* Utility classes */
+    .text-center {
+        text-align: center;
+    }
+
+
+    .hamburger-menu {
+        padding: 10px 10px;
+        background-color: #ff5c5c;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        background-color: #ff5c5c;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .btn-login {
+        padding: 10px 20px;
+        background-color: #f5f5f5;
+        color: #ff5c5c;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
+<!-- Mobile Navbar -->
+<div class="navbar mobile">
+    <div class="menu-icon navA" onclick="toggleMenu()">
+        <button class="hamburger-menu" id="btn-hamburger">☰</button>
+    </div>
+    <div class="logo">
+        <img src="../images/logo.png" width="200" alt="Brick Shop Logo">
+        <!-- <a href="#" class="btn">Login</a>
+                <a href="#" class="btn">Sign Up</a> -->
+    </div>
+</div>
+
+<!-- Mobile Menu Layer -->
+<div class="navLayer" id="nav-menu">
+    <div class="navbar-header">
+        <img src="../images/logo.png" width="200" alt="Brick Shop Logo">
+        <span class="closeBtn" onclick="toggleMenu()">X</span>
+    </div>
+    <ul class="nav-items">
+        <li><a href="#" class="active">Our Story</a></li>
+        <li><a href="#">Our Products</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Sign Up</a></li>
+        <li><a href="#">Login</a></li>
+    </ul>
+
+    <!-- Language Switch -->
+    <div class="lang-switch">
+        <button class="lang-btn">EN</button>
+        <button class="lang-btn active">VN</button>
+    </div>
+</div>
 
 <script>
-    document.querySelector('.hamburger-menu').addEventListener('click', function () {
-        document.querySelector('.navLayer').classList.toggle('open');
-    });
-
+    function toggleMenu() {
+        var navLayer = document.getElementById("nav-menu");
+        navLayer.classList.toggle("active");
+    }
 </script>

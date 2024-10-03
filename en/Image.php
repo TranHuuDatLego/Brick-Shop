@@ -340,6 +340,7 @@ if (isset($_SESSION["userID"])) {
                         <a class="list-group-item list-group-item-action" href="SocialLinks.php">Social links</a>
                         <a class="list-group-item list-group-item-action" href="Connections.php">Connections</a>
                         <a class="list-group-item list-group-item-action" href="Notifications.php">Notifications</a>
+                        <a class="list-group-item list-group-item-action" href="Languages.php">Languages</a>
                     </div>
                 </div>
                 <div class="col-md-9">
