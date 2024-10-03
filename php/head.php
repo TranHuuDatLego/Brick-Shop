@@ -1,17 +1,9 @@
 <!-- head.php -->
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="author" content="www.vancheer.com">
-<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
-<meta name="Keywords" content="Qman Toys">
-<meta name="Description"
-  content="Children's building blocks Guangdong Qman Culture Communication Co., LtdSmall building blocks">
-
-<link href="../style/main.css" rel="stylesheet" type="text/css">
-<link href="../style/index.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="../style/swiper.min.css">
-<link rel="stylesheet" href="../style/animate.min.css">
-<link rel="stylesheet" href="../style/jie.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brick Shop</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
