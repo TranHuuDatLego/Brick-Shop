@@ -60,6 +60,7 @@
 
     .logo img {
         max-width: 200px;
+        float: left;
     }
 
     .hamburger-menu {
@@ -189,17 +190,18 @@
         cursor: pointer;
     }
 
-    .btn {
+    .btn-sign-up {
+        margin-top: 20px;
         padding: 10px 20px;
         background-color: #ff5c5c;
         color: white;
         border: none;
         border-radius: 16px;
         cursor: pointer;
-
     }
 
     .btn-login {
+        margin-top: 20px;
         padding: 10px 20px;
         background-color: #ffffff;
         /* Màu nền trắng */
@@ -211,6 +213,92 @@
         /* Độ bo tròn viền */
         cursor: pointer;
     }
+
+    .btn-cart {
+        padding: 0px 0px;
+        background-color: #fff;
+        border: none;
+        border-radius: 16px;
+        cursor: pointer;
+        margin: 0px 15px;
+    }
+
+    /* Responsive Styles Header */
+    @media (max-width: 768px) {
+        .btn-cart {
+            padding: 5px 10px;
+            background-color: #fff;
+            border: none;
+            border-radius: 16px;
+            cursor: pointer;
+            margin: 5px 20px;
+        }
+
+    }
+
+    .img-user {
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .buttons {
+        padding: 10px 20px;
+        color: white;
+        border: none;
+        border-radius: 16px;
+        cursor: pointer;
+    }
+
+    /* Language switcher container */
+    .language-switcher {
+        position: relative;
+        display: inline-block;
+        margin-right: 20px;
+    }
+
+    /* Current language flag icon */
+    .current-lang img {
+        padding-top: 15px;
+        width: 48px;
+        cursor: pointer;
+    }
+
+    /* Dropdown styling */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: white;
+        width: 150px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .dropdown-content a {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        text-decoration: none;
+        color: black;
+        font-size: 14px;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+
+    /* Language option flag icons */
+    .lang-option img {
+        width: 18px;
+        margin-right: 8px;
+    }
+
+    /* Show dropdown when hovering */
+    .language-switcher:hover .dropdown-content {
+        display: block;
+    }
 </style>
 <!-- Header Section -->
 <header>
@@ -218,15 +306,27 @@
     <!-- Desktop Navbar -->
     <div class="navbar desktop">
         <a href="../en/index.php">
-        <div class="logo">
-            <img src="../images/logo.png" width="200" alt="Brick Shop Logo">
-        </div>
+            <div class="logo">
+                <img src="../images/logo.png" width="200" alt="Brick Shop Logo">
+            </div>
         </a>
 
         <ul>
-            <li><a class="active" href="../en/index.php">Home</a></li>
-            <li><a href="../en/product.php">Products</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <?php if ($website == 'index.php'): ?>
+                <li><a class="active" href="../en/index.php">Home</a></li>
+                <li><a href="../en/product.php">Products</a></li>
+                <li><a href="#">Contact Us</a></li>
+
+            <?php elseif ($website == 'contact.php'): ?>
+                <li><a href="../en/index.php">Home</a></li>
+                <li><a href="../en/product.php">Products</a></li>
+                <li><a class="active" href="#">Contact Us</a></li>
+
+            <?php else: ?>
+                <li><a href="../en/index.php">Home</a></li>
+                <li><a class="active" href="../en/product.php">Products</a></li>
+                <li><a href="#">Contact Us</a></li>
+            <?php endif ?>
         </ul>
         <ul>
             <div class="language-switcher">
@@ -234,52 +334,117 @@
                     <img src="../images/flags/en.png" alt="Vietnam Flag">
                 </div>
                 <div class="dropdown-content">
-                    <a href="../en/<?php echo $website?>" class="lang-option">
+                    <a href="../en/<?php echo $website ?>" class="lang-option">
                         <img src="../images/flags/en.png" alt="UK Flag"> English
                     </a>
-                    <a href="../vn/<?php echo $website?>" class="lang-option">
+                    <a href="../vn/<?php echo $website ?>" class="lang-option">
                         <img src="../images/flags/vn.png" alt="Vietnam Flag"> Tiếng Việt
                     </a>
                 </div>
+
             </div>
-            <a href="../php/Signup_en.php" class="btn-login">Sign Up</a>
-            <a href="../php/ChooseLogin_en.php" class="btn">Login</a>
-        </ul>
+
+
+            <!-- Show Icon cart and Profile Avatar -->
+            <?php if ($userLogin['userName']): ?>
+
+                <!-- <li><a href="#">Welcome, Doraemon và những người bạn tuyệt vời</a></li> -->
+
+                <!-- Show Icon cart  -->
+                <!-- fa-bounce -->
+                <button class="btn-cart"><a class="fa-duotone fa-solid fa-magnifying-glass fa-2xl" style="color: #ff5c5c; "></a></button>
+                <button class="btn-cart"><a id="cartButton" class="fa-duotone fa-solid fa-cart-shopping fa-2xl" style="color: #ff5c5c; padding-right:10px"></a></button>
+
+
+                <div class="language-switcher">
+
+                    <!-- <label style="padding-right: 10px; padding-top:0px">Hi, Duy</label> -->
+
+
+
+
+                    <!-- Show Profile Avatar -->
+                    <?php if (!$userLogin['image']): ?>
+                        <a href="../en/General.php"><img class="img-user" src="../user/male.png" width="50" height="50"></a>
+                </div>
+            <?php else: ?>
+                <a href="../en/General.php"><img class="img-user" src="../user/<?php echo $userLogin['image'] ?>" width="50"
+                        height="50"></a>
+    </div>
+<?php endif ?>
+
+<?php else: ?>
+    <!-- Sign up and login buttons -->
+    <div class="buttons">
+        <a style="margin-top: 20px;" href="../php/Signup_en.php" class="btn btn-sign-up">Sign Up</a>
+        <a style="margin-top: 20px;" href="../php/ChooseLogin_en.php" class="btn btn-login">Login</a>
     </div>
 
-    <!-- Mobile Navbar -->
-    <div class="navbar mobile">
-        <div class="menu-icon navA" onclick="toggleMenu()">
-            <button class="hamburger-menu" id="btn-hamburger">☰</button>
-        </div>
-        <div class="logo">
-            <img src="../images/logo.png" width="200" alt="Brick Shop Logo">
-            <!-- <a href="#" class="btn">Login</a>
+
+<?php endif; ?>
+</ul>
+</div>
+
+<!-- Mobile Navbar -->
+<div class="navbar mobile">
+    <div class="menu-icon navA" onclick="toggleMenu()">
+        <button class="hamburger-menu" id="btn-hamburger">☰</button>
+    </div>
+    <div class="logo">
+        <img src="../images/logo.png" width="200" alt="Brick Shop Logo">
+        <button class="btn-cart"><a class="fa-duotone fa-solid fa-magnifying-glass fa-2xl" style="color: #ff5c5c;"></a></button>
+
+        <!-- <a href="#" class="btn">Login</a>
         <a href="#" class="btn">Sign Up</a> -->
-        </div>
     </div>
+</div>
 
-    <!-- Mobile Menu Layer -->
-    <div class="navLayer" id="nav-menu">
-        <div class="navbar-header">
-            <img src="../images/logo.png" width="200" alt="Brick Shop Logo">
-            <span class="closeBtn" onclick="toggleMenu()">X</span>
-        </div>
-        <ul class="nav-items">
-            <li><a href="../en/index.php" class="active">Our Story</a></li>
-            <li><a href="../en/product.php">Our Products</a></li>
+<!-- Mobile Menu Layer -->
+<div class="navLayer" id="nav-menu">
+    <div class="navbar-header">
+        <img src="../images/logo.png" width="200" alt="Brick Shop Logo">
+        <span class="closeBtn" onclick="toggleMenu()">X</span>
+    </div>
+    <ul class="nav-items">
+        <?php if ($website == 'index.php'): ?>
+            <li><a class="active" href="../en/index.php">Home</a></li>
+            <li><a href="../en/product.php">Products</a></li>
             <li><a href="#">Contact Us</a></li>
-            <li><a href="../php/Signup_en.php">Sign Up</a></li>
-            <li><a href="../php/ChooseLogin_en.php">Login</a></li>
-        </ul>
 
-        <!-- Language Switch -->
-        <div class="lang-switch">
-            <a href="../en/<?php echo $website?>"><button class="lang-btn active">EN</button></a>
-            <a href="../vn/<?php echo $website?>"><button class="lang-btn ">VN</button></a>
-        </div>
-    </div>
+        <?php elseif ($website == 'contact.php'): ?>
+            <li><a href="../en/index.php">Home</a></li>
+            <li><a href="../en/product.php">Products</a></li>
+            <li><a class="active" href="#">Contact Us</a></li>
 
+        <?php else: ?>
+            <li><a href="../en/index.php">Home</a></li>
+            <li><a class="active" href="../en/product.php">Products</a></li>
+            <li><a href="#">Contact Us</a></li>
+        <?php endif ?>
 
+        <!-- Show Icon cart and Profile Avatar -->
+        <?php if ($userLogin['userName']): ?>
+            <li><a href="../en/General.php">View Cart</a></li>
+            <li><a href="../en/General.php">View Profile</a></li>
+    </ul>
+<?php else: ?>
+    <li><a href="../php/Signup_en.php">Sign Up</a></li>
+    <li><a href="../php/ChooseLogin_en.php">Login</a></li>
+    </ul>
+<?php endif; ?>
+
+<!-- Language Switch -->
+<div class="lang-switch">
+    <a href="../en/<?php echo $website ?>"><button class="lang-btn active">EN</button></a>
+    <a href="../vn/<?php echo $website ?>"><button class="lang-btn ">VN</button></a>
+</div>
+</div>
+
+<script>
+    function toggleMenu() {
+        var navLayer = document.getElementById("nav-menu");
+        navLayer.classList.toggle("active");
+    }
+</script>
 
 </header>

@@ -7,7 +7,7 @@
     <?php include '../php/head.php'; ?>
     <?php include '../php/login.php'; ?>
     <?php include '../php/getUser.php'; ?>
-    <title>Brick Shop - Qman Products</title>
+    <title>Brick Shop - Keeppley Products</title>
     <link rel="stylesheet" href="../css/product.css" />
 </head>
 
@@ -16,33 +16,31 @@
 
     <!-- Header Section -->
     <?php include '../php/header_home_en.php' ?>
-
     <!-- Cart Section -->
     <?php include '../en/cart.php' ?>
-
     <!-- Breadcrumb -->
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="../en/index.php">Trang chủ</a></li>
             <li class="breadcrumb-item"><a href="../en/product.php">Sản phẩm</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Qman</li>
+            <li class="breadcrumb-item active" aria-current="page">Keeppley</li>
         </ol>
     </nav>
 
     <!-- Brands Section -->
     <section class="brands">
         <div class="brand-logo">
-            <img src="../images/Qman_Wallpaper.png" alt="Product">
+            <img src="../images/Keeppley_Wallpaper.png" alt="Product">
         </div>
     </section>
 
     <!-- Products Section -->
     <section class="products">
-        <h2>Qman Products</h2>
+        <h2>Keeppley Products</h2>
         <div class="product-grid">
 
             <?php
-            $sqlQman = "SELECT * FROM `Category` WHERE `provider` = 'Qman'";
+            $sqlQman = "SELECT * FROM `Category` WHERE `provider` = 'Keeppley'";
             $result = mysqli_query($conn, $sqlQman);
 
             // Kiểm tra xem có kết quả trả về không
@@ -54,8 +52,10 @@
                     ?>
 
                     <div class="product">
-                        <img src="../images/5ce61d2ed281b.jpg" alt="Pokémon Keeppley">
-                        <p>Pokémon</p>
+                        <a href="../en/Category_Product.php?id=<?php echo $category['id']; ?>">
+                            <img src="../images/<?php echo $product_images[0]; ?>" alt="Pokémon Keeppley">
+                            <p><?php echo $category['name_en'] ?></p>
+                        </a>
                     </div>
                     <?php
 
