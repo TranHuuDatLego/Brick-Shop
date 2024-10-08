@@ -59,7 +59,7 @@ if (isset($_SESSION["userID"])) {
     <style type="text/css">
         body {
             background: #f5f5f5;
-            
+
         }
 
         .ui-w-80 {
@@ -194,7 +194,7 @@ if (isset($_SESSION["userID"])) {
     <?php include '../en/cart.php' ?>
 
     <div style="margin-top:20px" class="container light-style flex-grow-1 container-p-y">
-        
+
         <h4 class="font-weight-bold py-3 mb-4">
             Account settings
         </h4>
@@ -252,9 +252,15 @@ if (isset($_SESSION["userID"])) {
                             <a href="../php/logout.php" class="btn btn-danger btn-setting">Logout</a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Footer Section -->
+    <?php include '../en/footer.php' ?>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

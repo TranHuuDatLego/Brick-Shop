@@ -360,5 +360,6 @@ if (isset($_SESSION["userID"])) {
         });
     </script>
 </body>
-
+    <!-- Footer Section -->
+    <?php include '../en/footer.php' ?>
 </html>

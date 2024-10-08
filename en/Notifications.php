@@ -50,13 +50,13 @@ if (isset($_SESSION["userID"])) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Offline -->
     <link href="../style/bootstrap_4.5.0.css" rel="stylesheet">
-    
+
     <!-- Thêm favicon vào đây -->
     <link rel="icon" href="../images/keeppley_logo.webp" type="image/x-icon">
     <style type="text/css">
         body {
             background: #f5f5f5;
-            
+
         }
 
         .ui-w-80 {
@@ -184,14 +184,14 @@ if (isset($_SESSION["userID"])) {
 </head>
 
 <body inmaintabuse="1">
-        <!-- Header Section -->
-        <?php include '../php/header_home_en.php' ?>
+    <!-- Header Section -->
+    <?php include '../php/header_home_en.php' ?>
 
-<!-- Cart Section -->
-<?php include '../en/cart.php' ?>
+    <!-- Cart Section -->
+    <?php include '../en/cart.php' ?>
 
     <div style="margin-top:20px" class="container light-style flex-grow-1 container-p-y">
-        
+
         <h4 class="font-weight-bold py-3 mb-4">
             Account settings
         </h4>
@@ -207,7 +207,7 @@ if (isset($_SESSION["userID"])) {
                         <a class="list-group-item list-group-item-action" href="Connections.php">Connections</a>
                         <a class="list-group-item list-group-item-action active"
                             href="Notifications.php">Notifications</a>
-                            <a class="list-group-item list-group-item-action" href="Languages.php">Languages</a>
+                        <a class="list-group-item list-group-item-action" href="Languages.php">Languages</a>
                     </div>
                 </div>
                 <div class="col-md-9">
@@ -293,9 +293,15 @@ if (isset($_SESSION["userID"])) {
                             <a href="../php/logout.php" class="btn btn-danger btn-setting">Logout</a>
                         </div>
                     </div>
-
-                    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Section -->
+    <?php include '../en/footer.php' ?>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

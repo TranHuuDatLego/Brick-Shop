@@ -85,6 +85,15 @@ $website = "Product_Detail.php?p_id=" . $product['p_id'];
 </head>
 
 <style>
+    body{
+        background-color: #f5f5f5;
+    }
+
+    h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
     .container {
             background-color: #fff;
             max-width: 1200px;
