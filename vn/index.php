@@ -93,7 +93,10 @@
         </div>
     </section>
 
-    
+        <!-- Footer Section -->
+        <footer id="footer-section">
+        <?php include '../vn/footer.php'; ?>
+    </footer>
 
 </body>
 <script>

@@ -55,13 +55,13 @@ $website = basename($_SERVER['SCRIPT_NAME']);
 
                     // Tách chuỗi hình ảnh thành mảng và loại bỏ khoảng trắng thừa
                     $product_images = array_map('trim', explode(',', $category["images"]));
-                    ?>
+            ?>
 
-                    <div class="product">
-                        <img src="../images/5ce61d2ed281b.jpg" alt="Pokémon Keeppley">
-                        <p>Pokémon</p>
-                    </div>
-                    <?php
+                <div class="product">
+                    <img src="../images/5ce61d2ed281b.jpg" alt="Pokémon Keeppley">
+                    <p>Pokémon</p>
+                </div>
+            <?php
 
                 endwhile;
             ?>
@@ -85,15 +85,15 @@ $website = basename($_SERVER['SCRIPT_NAME']);
 
                     // Tách chuỗi hình ảnh thành mảng và loại bỏ khoảng trắng thừa
                     $product_images = array_map('trim', explode(',', $category["images"]));
-                    ?>
+            ?>
 
-                    <div class="product">
-                        <a href="../en/Category_Product.php?id=<?php echo $category['id']; ?>">
-                            <img src="../images/<?php echo $product_images[0]; ?>" alt="Pokémon Keeppley">
-                            <p><?php echo $category['name_en'] ?></p>
-                        </a>
-                    </div>
-                    <?php
+                <div class="product">
+                    <a href="../en/Category_Product.php?id=<?php echo $category['id']; ?>">
+                        <img src="../images/<?php echo $product_images[0]; ?>" alt="Pokémon Keeppley">
+                        <p><?php echo $category['name_en'] ?></p>
+                    </a>
+                </div>
+            <?php
 
                 endwhile;
             ?>
@@ -118,13 +118,13 @@ $website = basename($_SERVER['SCRIPT_NAME']);
 
                     // Tách chuỗi hình ảnh thành mảng và loại bỏ khoảng trắng thừa
                     $product_images = array_map('trim', explode(',', $category["images"]));
-                    ?>
+            ?>
 
-                    <div class="product">
-                        <img src="../images/5ce61d2ed281b.jpg" alt="Pokémon Keeppley">
-                        <p>Pokémon</p>
-                    </div>
-                    <?php
+                <div class="product">
+                    <img src="../images/5ce61d2ed281b.jpg" alt="Pokémon Keeppley">
+                    <p>Pokémon</p>
+                </div>
+            <?php
 
                 endwhile;
             ?>
@@ -137,7 +137,9 @@ $website = basename($_SERVER['SCRIPT_NAME']);
     </section>
 
     <!-- Footer Section -->
-    <?php include '../en/footer.php' ?>
+    <footer id="footer-section">
+        <?php include '../en/footer.php'; ?>
+    </footer>
 
 </body>
 

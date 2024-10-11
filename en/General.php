@@ -174,7 +174,7 @@ if (isset($_SESSION["userID"])) {
 
         .image-gallery {
             display: none;
-            
+
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -259,7 +259,7 @@ if (isset($_SESSION["userID"])) {
 
     <!-- Cart Section -->
     <?php include '../en/cart.php' ?>
-    
+
     <div style="margin-top:20px" class="container light-style flex-grow-1 container-p-y">
         <h4 class="font-weight-bold py-3 mb-4">
             Account settings
@@ -360,6 +360,9 @@ if (isset($_SESSION["userID"])) {
         });
     </script>
 </body>
-    <!-- Footer Section -->
-    <?php include '../en/footer.php' ?>
+<!-- Footer Section -->
+<footer id="footer-section">
+    <?php include '../en/footer.php'; ?>
+</footer>
+
 </html>
