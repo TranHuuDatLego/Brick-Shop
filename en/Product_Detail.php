@@ -68,6 +68,15 @@ if ($resultCategory->num_rows > 0) {
     $category_name_en = $category["name_en"];
     $category_name_vn = $category["name_vn"];
     $provider = $category["provider"];
+
+    $category_website = '';
+    if ($provider == 'Keeppley') {
+        $category_website = 'Keeppley-Products.php';
+    } else if ($provider == 'Qman') {
+        $category_website = 'Qman-Products.php';
+    } else if ($provider == 'LEGO') {
+        $category_website = 'LEGO-Products.php';
+    }
 }
 $website = "Product_Detail.php?p_id=" . $product['p_id'];
 ?>
@@ -306,7 +315,10 @@ $website = "Product_Detail.php?p_id=" . $product['p_id'];
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="../en/index.php">Trang chủ</a></li>
             <li class="breadcrumb-item"><a href="../en/product.php">Sản phẩm</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Keeppley</li>
+            <li class="breadcrumb-item"><a href="../en/<?php echo $category_website ?>">
+                    <?php echo $provider ?></a></li>
+            <li class="breadcrumb-item active" aria-current="page"><?php echo $category_name_en ?></li>
+            <li class="breadcrumb-item active" aria-current="page"><?php echo $products['p_name_en'] ?></li>
         </ol>
     </nav>
 

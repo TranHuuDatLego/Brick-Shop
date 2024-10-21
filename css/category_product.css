@@ -476,6 +476,12 @@
         border: 1px solid #333;
         color: #f0f0f0;
     }
+
+    .dark-mode .product {
+        background-color: #1e1e1e;
+        border: 1px solid #333;
+        color: #f0f0f0;
+    }
     
     .dark-mode .product p {
         color: #e0e0e0;
