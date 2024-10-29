@@ -47,6 +47,11 @@
         background-color: #f5f5f5;
     }
 
+    .line{
+        height: 1px;
+        background-color: #000;
+    }
+
     @media only screen and (max-width: 600px) {
         .footer-column {
             flex: 1 1 100px;
@@ -90,6 +95,10 @@
     <div style="display: flex; justify-content: center; align-items: center;">
         <img src="../images/17.png" alt="" class="f-cute">
     </div>
+
+    <div class="line">
+    </div>
+
     <div style="background-color: #f5f5f5; display: flex; justify-content: space-around; flex-wrap: wrap; padding-left:30px">
         <!-- LEGAL -->
         <div class="footer-column">

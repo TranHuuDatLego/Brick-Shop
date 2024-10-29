@@ -49,6 +49,11 @@
         background-color: #000 !important; /* Đổi background-color thành đen */
     }
 
+    .line{
+        height: 1px;
+        background-color: #fff;
+    }
+
     @media only screen and (max-width: 600px) {
         .footer-column {
             flex: 1 1 100px;
@@ -92,6 +97,11 @@
     <div style="display: flex; justify-content: center; align-items: center;">
         <img src="../images/17.png" alt="" class="f-cute">
     </div>
+
+    <div class="line">
+    </div>
+
+    
     <div style="background-color: #000; display: flex; justify-content: space-around; flex-wrap: wrap; padding-left:30px"> <!-- Đổi background-color thành đen -->
         <!-- LEGAL -->
         <div class="footer-column">

@@ -27,7 +27,7 @@ $website = basename($_SERVER['SCRIPT_NAME']);
     <!-- Qman Section -->
     <section style="padding-left: 80px;" class="qman-section">
         <div class="qman-text">
-        <img style="padding-left: 30px;" src="../images/2022101014476761.png" alt="Qman Product">
+            <img style="padding-left: 30px;" src="../images/2022101014476761.png" alt="Qman Product">
             <h1 style="margin-bottom: 30px; max-width: 700px;">A leading Chinese toy brand, specializing in original
                 building blocks since 1994.</h1>
             <p style="margin-bottom: 30px; max-width: 700px;">The journey of Qman began in 1994, sparked by Mr. Zhan
@@ -98,11 +98,18 @@ $website = basename($_SERVER['SCRIPT_NAME']);
             </p>
         </div>
         <div class="img-container">
-            <a href="#"><img class="img-lego" src="../images/LegoChima.jfif" alt="" height="150" width="275"></a>
+            <div class="img-lego" ><a href="#"><img src="../images/LegoNexoKnights.jfif" alt="" height="150" width="275"></a></div>
+            <div class="img-lego" ><a href="#"><img src="../images/LegoChima.jfif" alt="" height="150" width="275"></a></div>
+            <div class="img-lego" ><a href="#"><img src="../images/LEGO-City-logo.jpg" alt="" height="150" width="275"></a></div>
+            <div class="img-lego" ><a href="#"><img src="../images/LegoNinjago.jfif" alt="" height="150" width="275"></a></div>
+        </div>
+
+        <!-- <div class="img-container">
             <a href="#"><img class="img-lego" src="../images/LegoNexoKnights.jfif" alt="" height="150" width="275"></a>
+            <a href="#"><img class="img-lego" src="../images/LegoChima.jfif" alt="" height="150" width="275"></a>
             <a href="#"><img class="img-lego" src="../images/LEGO-City-logo.jpg" alt="" height="150" width="275"></a>
             <a href="#"><img class="img-lego" src="../images/LegoNinjago.jfif" alt="" height="150" width="275"></a>
-        </div>
+        </div> -->
     </section>
 
 
